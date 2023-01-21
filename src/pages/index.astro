@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Logo from "../components/logo.vue";
+import { Icon } from "astro-icon";
+---
+
+<Layout title="RealDating.">
+  <main class="h-screen flex flex-col items-center justify-evenly bg-primary">
+    <Logo />
+    <h1 class="text-white text-6xl font-bold">RealDating.</h1>
+
+    <a
+      href="https://appdistribution.firebase.dev/i/5610e3cce165ec80"
+      target="_blank"
+      class="bg-white text-primary font-bold py-2 px-4 rounded-lg"
+    >
+      Androidaa
+    </a>
+
+    <Icon pack="mdi" name="android" />
+  </main>
+</Layout>
+
+<style lang="css">
+  [astro-icon] {
+    color: white;
+  }
+  [astro-icon="annotation"] {
+    color: red;
+    /* OR */
+    fill: red;
+  }
+</style>
