@@ -1,0 +1,64 @@
+---
+import { Icon } from "astro-icon";
+
+const infoItems = [
+  {
+    title: "Privacy Policy",
+    // link: "/privacy-policy/",
+    link: "https://felixguenthner.com",
+  },
+  {
+    title: "Imprint",
+    link: "https://felixguenthner.com/imprint",
+  },
+];
+
+const socialItems = [
+  {
+    title: "Instagram",
+    icon: "logos:instagram-icon",
+    link: "https://www.instagram.com/interview_app",
+  },
+];
+---
+
+<footer
+  class="w-full p-4 space-y-2 bg-primary md:inline-flex md:items-center md:justify-between md:space-y-0 md:p-6"
+>
+  <p class="text-sm font-bold text-white">© 2023 RealDating.</p>
+
+  <div class="flex flex-row space-x-4">
+    <ul class="flex flex-wrap items-center space-x-4">
+      {
+        infoItems.map((data) => (
+          <li>
+            <a href={data.link} target="_blank" aria-label={data.title}>
+              <span class="text-sm text-gray-400 hover:underline">
+                {data.title}
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- <ul class="flex flex-wrap items-center space-x-4">
+      {
+        socialItems.map((data) => (
+          <li>
+            <a
+              href={data.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={data.title}
+            >
+              <div class="w-4 h-4">
+                <Icon name={data.icon} />
+              </div>
+            </a>
+          </li>
+        ))
+      }
+    </ul> -->
+  </div>
+</footer>
