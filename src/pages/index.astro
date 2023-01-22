@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Logo from "../components/logo.vue";
 import { Icon } from "astro-icon";
+import Form from "../components/form.vue";
 ---
 
 <Layout title="RealDating.">
@@ -9,44 +10,46 @@ import { Icon } from "astro-icon";
     <!-- header section -->
     <span class="flex flex-col items-center space-y-10">
       <Logo />
-      <h1 class="text-white text-5xl font-bold">RealDating.</h1>
+
+      <div class="flex flex-col items-center space-y-2">
+        <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl">
+          RealDating.
+        </h1>
+        <h2
+          class="text-4xl font-bold leading-none tracking-tight text-white md:text-5xl lg:text-6xl"
+        >
+          Designed to be <span
+            class="underline underline-offset-3 decoration-8 decoration-accent"
+            >real.</span
+          >
+        </h2>
+      </div>
     </span>
 
-    <!-- body section -->
-    <div class="w-full flex flex-col items-center space-y-10">
-      <p class="text-white text-2xl font-bold">Get the alpha version</p>
+    <Form client:load />
 
-      <!-- android and ios buttons -->
-      <span
+    <!-- android and ios buttons -->
+    <!-- <span
         class="w-full flex flex-row justify-evenly md:justify-center md:space-x-28"
       >
-        <!-- android button -->
         <button
           onclick="window.open(androidUrl,'_blank')"
-          class="inline-flex items-center space-x-2 bg-white text-primary font-bold py-2 px-4 rounded-full"
+          class="inline-flex items-center space-x-3 bg-white text-primary font-bold py-2 px-4 rounded-full"
         >
           <Icon pack="mdi" name="android" class="h-7 w-7" />
           <span>Android</span>
         </button>
-
-        <!-- ios button -->
-        <button
-          onclick="window.open(androidUrl,'_blank')"
-          class="inline-flex items-center space-x-2 bg-white text-primary font-bold py-2 px-4 rounded-full"
-        >
-          <Icon name="mdi:apple" class="h-7 w-7" />
-          <span>IOS</span>
-        </button>
       </span>
     </div>
+  </main> -->
   </main>
-
-  <style lang="css">
-    /* [astro-icon] {
-      color: white;
-    } */
-    /* [astro-icon="annotation"] {
-    color: red;
-  } */
-  </style>
 </Layout>
+
+<style lang="css">
+  [astro-icon] {
+    color: #222224;
+  }
+  /* [astro-icon="annotation"] {
+color: red;
+} */
+</style>

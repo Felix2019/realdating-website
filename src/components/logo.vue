@@ -1,5 +1,5 @@
 <template>
-  <img :src="logoUrl" alt="realdating-logo" class="w-1/2 md:w-1/4 lg:w-1/6" />
+  <img :src="logoUrl" alt="realdating-logo" class="w-1/3 md:w-1/4 lg:w-1/6" />
 </template>
 
 <script lang="ts" setup>
