@@ -26,22 +26,32 @@ import Form from "../components/form.vue";
       </div>
     </span>
 
-    <Form client:load />
+    <!-- <Form client:load /> -->
 
     <!-- android and ios buttons -->
-    <!-- <span
+    <div class="w-full flex flex-col items-center space-y-10">
+      <p class="text-white text-2xl font-bold">Get the alpha version.</p>
+
+      <span
         class="w-full flex flex-row justify-evenly md:justify-center md:space-x-28"
       >
         <button
-          onclick="window.open(androidUrl,'_blank')"
+          onclick="window.open('https://appdistribution.firebase.dev/i/a84d472bcd6b6962','_blank')"
           class="inline-flex items-center space-x-3 bg-white text-primary font-bold py-2 px-4 rounded-full"
         >
           <Icon pack="mdi" name="android" class="h-7 w-7" />
           <span>Android</span>
         </button>
+
+        <button
+          onclick="window.open('https://testflight.apple.com/join/PPN0nKbH','_blank')"
+          class="inline-flex items-center space-x-3 bg-white text-primary font-bold py-2 px-4 rounded-full"
+        >
+          <Icon pack="mdi" name="apple" class="h-7 w-7" />
+          <span>IOS</span>
+        </button>
       </span>
     </div>
-  </main> -->
   </main>
 </Layout>
 
